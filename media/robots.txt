@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /lists/
+Disallow: /name/books/
+Disallow: /tag/
+Disallow: /jsonlist

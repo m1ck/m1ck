@@ -1,0 +1,52 @@
+
+div.social-icons  a {
+	opacity:0.8;
+}
+div.social-icons  a:hover {
+	opacity:1;
+}
+
+
+
+
+.bs-callout {
+margin: 20px 0;
+padding: 20px;
+border-left: 3px solid #eee;
+}
+
+.bs-callout-danger h4 {
+color: #b94a48;
+}
+
+
+
+.m {
+color: #FF6600;
+}
+
+.highlight pre code {
+font-size: inherit;
+color: #333;
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.bs-callout-info {   
+background-color: #d9edf7;
+border-color: #47B9EB;
+}
+
+.bs-callout-warning {
+background-color: #faf8f0;
+border-color:   #FFCC00;
+}
+
+.bs-callout-danger {
+background-color: #fdf7f7;
+border-color: #FF3443;
+}

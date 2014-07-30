@@ -1,0 +1,69 @@
+application: m1ck-com
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /media 
+  static_dir: media
+
+- url: (.*)/
+  static_files: angular/app\1/index.html
+  upload: angular/app/index\.html
+  mime_type: text/html; charset=utf-8
+
+
+- url: (/.*\.html)
+  static_files: angular/app\1
+  upload: angular/app/.*\.html
+  mime_type: text/html; charset=utf-8
+
+
+- url: (/.*\.css)
+  static_files: angular/app\1
+  upload: angular/app/.*\.css
+  mime_type: text/css; charset=utf-8
+
+
+- url: (/.*\.js)
+  static_files: angular/app\1
+  upload: angular/app/.*\.js
+  mime_type: text/javascript; charset=utf-8
+
+- url: /img/(.*)
+  static_files: angular/app/img/\1
+  upload: angular/app/img/(.*)
+
+- url: /font/(.*)
+  static_files: angular/app/font/\1
+  upload: angular/app/font/(.*)
+
+- url: /font/css/(.*)
+  static_files: angular/app/font/css/\1
+  upload: angular/app/font/(.*)
+
+
+- url: /robots.txt
+  static_files: media/robots.txt
+  upload: media/robots.txt
+
+#Django
+#Django
+#Django
+
+
+
+- url: /cgi
+  script: main.app
+
+libraries:
+- name: django
+  version: "1.5"
+
+builtins:
+- django_wsgi: on  
+#https://developers.google.com/appengine/docs/python/config/appconfig
